@@ -717,68 +717,83 @@ footer li{
    MOBILE RESPONSIVE
 =========================== */
 
-@media (max-width: 768px) {
+@media (max-width:768px){
 
 nav{
     flex-direction:column;
-    gap:20px;
-    padding:20px;
+    padding:18px;
+    gap:18px;
 }
 
 nav ul{
+    gap:18px;
     flex-wrap:wrap;
     justify-content:center;
-    gap:20px;
+}
+
+.logo{
+    justify-content:center;
 }
 
 .hero{
     height:auto;
-    padding:120px 20px 80px;
-}
-
-.hero-content{
-    width:100%;
-    text-align:center;
+    padding:180px 20px 100px;
 }
 
 .hero h1{
-    font-size:48px;
-    line-height:1.1;
+    font-size:42px;
 }
 
 .hero p{
-    font-size:20px;
+    font-size:18px;
 }
 
-.services{
-    padding:80px 20px;
+.services,
+.about,
+.contact,
+.why-us,
+.how-it-works{
+    padding:70px 20px;
 }
 
-.service-grid{
+.service-grid,
+.steps,
+.about,
+.contact,
+.why-us,
+.footer-container{
     grid-template-columns:1fr;
 }
 
 .about{
-    flex-direction:column;
-    padding:80px 20px;
-}
-
-.about-image,
-.about-text{
-    width:100%;
+    gap:40px;
 }
 
 .contact{
-    flex-direction:column;
+    gap:40px;
 }
 
-.contact-left,
-.contact-right{
+.contact h2,
+.about h2,
+.services h2,
+.section-title h2,
+.why-left h2{
+    font-size:36px;
+}
+
+.card,
+.step{
+    padding:30px;
+}
+
+.hero-button{
     width:100%;
-    padding:50px 25px;
+    text-align:center;
 }
 
-.contact form{
+.contact input,
+.contact textarea,
+.contact select{
     width:100%;
 }
 
