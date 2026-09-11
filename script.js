@@ -6,29 +6,33 @@ form.addEventListener("submit", async function (e) {
 
     const formData = new FormData(form);
 
-    const response = await fetch("https://formspree.io/f/xeebrrjl", {
+    try {
 
-        method: "POST",
+        const response = await fetch("https://formspree.io/f/xeebrrjl", {
 
-        body: formData,
+            method: "POST",
 
-        headers: {
+            body: formData,
 
-            Accept: "application/json"
+            headers: {
+                Accept: "application/json"
+            }
+
+        });
+
+        if (response.ok) {
+
+            window.location.href = "thankyou.html";
+
+        } else {
+
+            alert("Something went wrong. Please try again.");
 
         }
 
-    });
+    } catch (error) {
 
-    if(response.ok){
-
-        document.getElementById("success-message").style.display = "block";
-
-        form.reset();
-
-    }else{
-
-        alert("❌ Something went wrong. Please try again.");
+        alert("Something went wrong. Please check your connection and try again.");
 
     }
 
